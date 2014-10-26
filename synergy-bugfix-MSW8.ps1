@@ -2,7 +2,7 @@
 # Full-Name: synergy-bugfix-MSWQ.ps1
 # Easy Name: synergy-bugfix
 # File Type: Windows Powershell Script
-# Version: 1.0.0
+# Version: 1.0.1
 # By: John A. Reed - ZykezIX - secure@zykez.com
 # Credits: Derik Palacino for the remKbCmd - Derik please contact me at the above
 #	if you'd like more information shown here.
@@ -17,6 +17,8 @@
 # To Use: To run this file, right click on it and choose: "Run As PowerShell"
 #
 #	Please see: https://github.com/synergy/synergy/issues/4055 for more information.
+#
+# 	Applies To Synergy 1.5.1 - http://synergy-project.org/
 
 $kbs = @(2975719,2977174,2982791,2984006,2993651,2994897,2995004,2995005,2993651)
 $kbSearch = "KB" + ($kbs -join " OR KB")
@@ -34,8 +36,9 @@ foreach($kb in $kbs)
     }
     Write-Host ""
 }
+# User Prompt Function
 # Full directions/information at:
-# <Insert HTTP Here>
+# https://github.com/ZykezIX/Synergy-Bugfix/blob/master/functions/zykezix-userprompt-1.0.0.ps1
 #
 # By John A. Reed - ZykezIX
 #
